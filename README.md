@@ -1,49 +1,46 @@
-# ETL en Azure: Data Factory + Databricks + SQL + Power BI
-Proyecto de pipeline en Azure Data Factory con integración a Databricks, SQL Database y visualización en Power BI
+# ETL en Azure: Data Factory + SQL Database
 
-## 🚀 Objetivo
-Implementar un pipeline de datos en Azure para procesar información de COVID y generar visualizaciones en Power BI.
+Proyecto de pipeline en **Azure Data Factory** para ingerir datos de COVID desde Data Lake y 
+persistirlos en **Azure SQL Database**.  
 
-## Dataset
-Se utilizó un dataset de COVID (casos confirmados, muertes, población) en formato CSV para simular un escenario real de ingesta y transformación de datos.
+---
 
-## Arquitectura
-1. **Azure Data Factory** → Orquesta pipelines.
-2. **Azure Databricks** → Limpieza, transformación y forecasting.
-3. **Azure SQL Database** → Persistencia de datos.
-4. **Power BI** → Dashboards de análisis.
+## 🎯 Objetivo
+Implementar un pipeline en Azure que:
+- Ingesta datos desde archivos CSV.
+- Valida la presencia de los archivos en Data Lake.
+- Copia y persiste los datos en una tabla de Azure SQL Database (`covid_population`).
 
-## 🛠️ Tecnologías
-- Azure Data Factory
-- Azure Databricks (PySpark, Prophet, SQL)
-- Azure SQL Database
-- Power BI
-- Python
+---
 
-## Resultados
-Los datos procesados fueron visualizados en Power BI, generando dashboards con métricas como:
-- Casos confirmados por cada 100k habitantes.
-- Tasa de mortalidad.
-- Evolución temporal de la pandemia por región.
+## 🚀 Pipeline en Data Factory
+Pipeline orquestado que incluye:
+- Validación de archivos.
+- Obtención de metadatos.
+- Actividad **Copy Data** para cargar información en SQL.
 
-- ## Cómo usar este proyecto
-1. Clonar este repositorio.
-2. Cargar el dataset de COVID en Azure Data Lake Storage (CSV).
-3. Ejecutar el pipeline en Azure Data Factory para orquestar la ingesta.
-4. Procesar los datos con notebooks de Databricks en PySpark/SQL.
-5. Persistir resultados en Azure SQL Database.
-6. Conectar Power BI al SQL Database para visualizar dashboards.
+📸 Ejemplo de actividad *Copy Data* en el pipeline:
+![Copy Data Pipeline](pictures/copy_data_pipeline.PNG)
 
-## Persistencia en SQL Database
-Esta captura muestra la tabla `covid_population` creada en **Azure SQL Database** y consultada con un `SELECT TOP 1000`.
+---
 
+## 🛢️ Persistencia en SQL Database
+Los datos se almacenan en una tabla relacional dentro de **Azure SQL Database**, accesible vía editor de consultas.  
+
+📸 Vista de la tabla con los datos cargados:
 ![SQL Database](pictures/sql_database.PNG)
 
+---
 
-## Pipeline de persistencia en Azure Data Factory
-Aquí se ve el pipeline `data_persist` en **Azure Data Factory**, que utiliza la actividad *Copy Data* para copiar datos transformados hacia la base de datos SQL.
+## 📊 Resultados esperados
+- Carga exitosa de datos en SQL Database.
+- Preparación para su futura visualización en Power BI.
 
-![Pipeline Copy Data](pictures/copy_data_pipeline.PNG)
+---
 
+## 🔧 Tecnologías utilizadas
+- **Azure Data Factory**
+- **Azure Data Lake Storage**
+- **Azure SQL Database**
 
 
