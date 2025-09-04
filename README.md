@@ -22,7 +22,7 @@ Pipeline orquestado que incluye:
 - Actividad **Copy Data** para procesar el archivo cuando la validación es correcta.  
 
 📸 Ejemplo del pipeline en Data Factory:  
-
+![Pipeline de Validación](pictures/validation_pipeline.PNG) 
 
 ---
 
