@@ -33,3 +33,6 @@ Los datos procesados fueron visualizados en Power BI, generando dashboards con m
 4. Procesar los datos con notebooks de Databricks en PySpark/SQL.
 5. Persistir resultados en Azure SQL Database.
 6. Conectar Power BI al SQL Database para visualizar dashboards.
+
+7. 
+<img width="1879" height="923" alt="base_datos_sql" src="https://github.com/user-attachments/assets/58c494fb-6655-45d4-a806-5304bfdc09fa" />
