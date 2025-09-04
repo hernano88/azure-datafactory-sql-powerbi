@@ -42,7 +42,7 @@ El pipeline gestiona los archivos en el **Azure Data Lake Storage** y asegura qu
 - **Azure Data Factory**  
 - **Azure Data Lake Storage**
 
-# Proyecto 3. ETL en Azure: Data Factory + SQL Database
+# Proyecto 2. ETL en Azure: Data Factory + SQL Database
 
 Proyecto de pipeline en **Azure Data Factory** para ingerir datos de COVID desde Data Lake y 
 persistirlos en **Azure SQL Database**.  
