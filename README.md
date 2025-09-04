@@ -34,4 +34,16 @@ Los datos procesados fueron visualizados en Power BI, generando dashboards con m
 5. Persistir resultados en Azure SQL Database.
 6. Conectar Power BI al SQL Database para visualizar dashboards.
 
-![Base de datos en Azure](readme_assets/base_datos_sql.PNG)
+## Persistencia en SQL Database
+Esta captura muestra la tabla `covid_population` creada en **Azure SQL Database** y consultada con un `SELECT TOP 1000`.
+
+![SQL Database](pictures/sql_database.PNG)
+
+
+## Pipeline de persistencia en Azure Data Factory
+Aquí se ve el pipeline `data_persist` en **Azure Data Factory**, que utiliza la actividad *Copy Data* para copiar datos transformados hacia la base de datos SQL.
+
+![Pipeline Copy Data](pictures/copy_data_pipeline.PNG)
+
+
+
